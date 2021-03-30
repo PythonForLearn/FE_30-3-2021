@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <span (click)="open(null)" >Add</span>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Code</th>
+        <th>Quantity</th>
+        <th>ImageURL</th> 
+      </tr>
+      <tr *ngFor="let item of products" >
+        
+        <td>{{item.name}}</td>
+        <td>{{item.code}}</td>
+        <td>{{item.quantity}}</td>
+        <td>{{item.imageURL}}</td>
+        <td><span (click)="open(item)"> Edit</span></td>
+        <td><span (click)="Delete(item.id)">Delete</span></td>
+      </tr>
+    </table>
+
+  </body>
+</html>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(null)">Launch demo modal</button>
